@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
- --button-vio: #b86ab8;
+ --button-vio: #be7dbe;
   --back-lila: #f3d4f3;
-  --back-lila_s: #f5e3f5;
+  --back-lila_s: #f8e7f8;
 }
 
 body {

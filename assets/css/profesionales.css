@@ -3,7 +3,7 @@
 
 
 .prof-container {
-  padding: 120px 20px;
+  padding: 150px 20px;
   background: var(--back-lila_s);
 }
 
@@ -61,7 +61,7 @@
 
 .prof-role {
   font-weight: bold;
-  color: #5D8AF5;
+  color: var(--button-vio);
   margin-bottom: 15px;
 }
 

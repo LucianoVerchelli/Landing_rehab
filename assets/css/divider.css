@@ -1,0 +1,68 @@
+@import "../css/base.css";
+
+
+.divider-section {
+    background: url('../assets/img/bg-trees.jpg') center/cover no-repeat;
+    padding: 100px 0;
+    margin-top: 100px;
+    position: relative;
+}
+
+.divider-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(180, 118, 224, 0.062); /* tono lila MUY suave como tus secciones */
+    backdrop-filter: blur(5px); 
+}
+
+.divider-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+.divider-title {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #1a1a1a; /* mismo tono del título principal */
+    margin: 0;
+}
+
+.divider-btn {
+    background-color: var(--button-vio);
+    padding: 12px 26px;
+    border-radius: 6px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    transition: background 0.4s ease;
+    white-space: nowrap;
+}
+
+.divider-btn:hover {
+    background: linear-gradient(90deg, #7c84f8, #fd2bfd);
+}
+
+@media (max-width: 900px) {
+    .divider-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .divider-title {
+        font-size: 1.9rem;
+    }
+
+    .divider-btn {
+        width: fit-content;
+    }
+
+    .divider-section {
+        margin-top: 200px !important;
+    }
+
+}

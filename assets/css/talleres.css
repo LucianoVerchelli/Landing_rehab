@@ -1,15 +1,15 @@
 .talleres-container {
     max-height: 1300px;
     margin: auto;
-  padding: 120px 50px 150px;
+  padding: 120px 50px 100px;
     text-align: center;
 }
 
 .titulo {
     font-size: 2.5rem;
     font-weight: 800;
-    color: var(--button-vio);
-    margin-bottom: 20px;
+    color: #1a1a1a;
+    margin-bottom: 30px;
 }
 
 .subtitulo {
@@ -17,13 +17,16 @@
     margin: auto;
     font-size: 1.1rem;
     color: #444;
-    margin-bottom: 60px;
+    margin-bottom: 120px;
 }
-
+.icon {
+    width: 55px;
+    filter: brightness(0) saturate(100%) invert(78%) sepia(17%) saturate(879%) hue-rotate(257deg) brightness(92%) contrast(87%);
+}
 .grid-talleres {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 55px 40px;
+    gap: 100px 40px;
 }
 
 .item {
@@ -45,7 +48,7 @@
     margin: 0 0 10px;
     font-size: 1.35rem;
     font-weight: 700;
-    color: var(--button-vio);
+    color: #1a1a1a;
 }
 
 .item p {
@@ -66,4 +69,6 @@
 @media (max-width: 480px) {
     .item img { width: 45px; height: 45px; }
     .titulo { font-size: 2rem; }
+
+    .talleres-container{padding: 100px 50px 250px;}
 }
