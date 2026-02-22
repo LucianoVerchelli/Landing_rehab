@@ -1,0 +1,113 @@
+@import "../css/base.css";
+
+.section{
+  min-height:100vh;
+  padding-top: 70px;
+  display:flex;
+  align-items:flex-start;
+}
+
+.wrap{
+  width:min(1180px, 92vw);
+  margin: 26px auto 50px;
+}
+
+.grid{
+  display:grid;
+  padding-top: 200px;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 54px;
+  align-items:start;
+}
+
+.content{ padding-top: 10px; }
+
+.title{
+  margin:0 0 22px;
+  font-size: 56px;
+  line-height: 1.02;
+  letter-spacing:-.02em;
+  font-weight:800;
+  color:#2f2f2f;
+}
+
+.lead{
+  margin: 0 0 16px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #3f3f46;
+  max-width: 520px;
+}
+
+.btn-objetivos{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:34px;
+  padding:16px 28px;
+  background:var(--button-vio);
+  color:#fff !important;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:600;
+  letter-spacing:.06em;
+  font-size:12px;
+  box-shadow:0 14px 30px rgba(93,138,245,.28);
+  position:relative;
+  z-index:10;
+  transition: background-color 1s ease-in-out;
+}
+.btn-objetivos:hover{ 
+  background: linear-gradient(90deg, #7c84f8, #fd2bfd);
+  color: white;
+}
+
+.media{ position:relative; }
+.media-frame{ position:relative; overflow:visible !important; }
+.media-img{
+  position:relative;
+  z-index:1;
+  border-radius:28px;
+  display:block;
+  width:100%;
+  height:420px;
+  object-fit:cover;
+}
+
+.quote-card{
+  position:absolute;
+  left:24px;
+  right:24px;
+  bottom:-44px;
+  background:#fff;
+  border-radius:14px;
+  box-shadow:0 18px 40px rgba(0,0,0,.18);
+  padding:22px 26px;
+  text-align:center;
+  z-index:2;
+}
+
+.quote-card p{
+  margin:0;
+  font-size: 14px;
+  line-height: 1.85;
+  color:#3f3f46;
+}
+
+/* RESPONSIVE */
+@media (max-width: 980px){
+  .grid{ grid-template-columns: 1fr; }
+  .title{ font-size: 44px; }
+  .media-img{ height: 360px; }
+  .quote-card{ bottom: -34px; }
+}
+
+@media (max-width: 520px){
+  .title{ font-size: 36px; }
+  .media-img{ height: 320px; }
+  .quote-card{
+    left: 14px;
+    right: 14px;
+    padding: 18px 16px;
+  }
+}
