@@ -1,7 +1,7 @@
 .talleres-container {
-    max-height: 1300px;
+    min-height: 60svh; /* antes era max-height */
     margin: auto;
-  padding: 120px 50px 100px;
+    padding: 120px 50px 100px;
     text-align: center;
 }
 
@@ -19,10 +19,13 @@
     color: #444;
     margin-bottom: 120px;
 }
+
 .icon {
     width: 55px;
-    filter: brightness(0) saturate(100%) invert(78%) sepia(17%) saturate(879%) hue-rotate(257deg) brightness(92%) contrast(87%);
+    filter: brightness(0) saturate(100%) invert(78%) sepia(17%) 
+            saturate(879%) hue-rotate(257deg) brightness(92%) contrast(87%);
 }
+
 .grid-talleres {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -40,8 +43,8 @@
     width: 55px;
     height: 55px;
     object-fit: contain;
-    filter: brightness(0) saturate(100%) invert(29%) sepia(97%) saturate(1711%)
-            hue-rotate(191deg) brightness(95%) contrast(93%);
+    filter: brightness(0) saturate(100%) invert(29%) sepia(97%) 
+            saturate(1711%) hue-rotate(191deg) brightness(95%) contrast(93%);
 }
 
 .item h3 {
@@ -57,18 +60,35 @@
     color: #333;
 }
 
+/* ============================= */
 /* RESPONSIVE */
+/* ============================= */
+
 @media (max-width: 1100px) {
-    .grid-talleres { grid-template-columns: repeat(2, 1fr); }
+    .grid-talleres {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 700px) {
-    .grid-talleres { grid-template-columns: 1fr; }
+    .grid-talleres {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 480px) {
-    .item img { width: 45px; height: 45px; }
-    .titulo { font-size: 2rem; }
 
-    .talleres-container{padding: 100px 50px 250px;}
+    .titulo {
+        font-size: 2rem;
+    }
+
+    .item img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .talleres-container {
+        padding: 100px 40px 120px; 
+        /* antes tenías 250px abajo, eso exageraba el espacio */
+    }
 }

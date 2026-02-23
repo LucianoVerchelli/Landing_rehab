@@ -99,15 +99,16 @@
   .grid{ grid-template-columns: 1fr; }
   .title{ font-size: 44px; }
   .media-img{ height: 360px; }
-  .quote-card{ bottom: -34px; }
+  .quote-card{ bottom: -110px; }
 }
 
 @media (max-width: 520px){
   .title{ font-size: 36px; }
   .media-img{ height: 320px; }
+  .quote-card{ bottom: -110px; }
   .quote-card{
     left: 14px;
     right: 14px;
-    padding: 18px 16px;
+    padding: 18px 20px;
   }
 }
