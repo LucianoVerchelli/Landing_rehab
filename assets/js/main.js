@@ -34,3 +34,25 @@ faqQuestions.forEach((btn) => {
         }
     });
 });
+
+
+// animacion quote card y imagen 
+
+// Animación quote card, imagen y texto
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".anim-img, .anim-text, .anim-quote");
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { // animamos al entrar en viewport, sin depender del scroll
+          entry.target.classList.add("appear");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 } // detecta cuando 10% del elemento entra en viewport
+  );
+
+  elements.forEach(el => observer.observe(el));
+});
