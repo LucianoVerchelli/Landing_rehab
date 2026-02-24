@@ -16,7 +16,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(180, 118, 224, 0.06);
+    background: rgba(180, 118, 224, 0.26);
     backdrop-filter: blur(5px);
     z-index: 1;
 }
@@ -49,7 +49,7 @@
 }
 
 .divider-btn:hover {
-    background: linear-gradient(90deg, #7c84f8, #fd2bfd);
+    background: linear-gradient(90deg, #7c84f8, #fc21fc);
 }
 
 /* ============================= */
