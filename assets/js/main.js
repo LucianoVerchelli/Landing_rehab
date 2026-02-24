@@ -1,7 +1,7 @@
 // Botón hamburguesa
 const navToggle = document.querySelector(".nav-toggle");
 
-// El <nav> que vamos a mostrar/ocultar
+// mostrar/ocultar el <nav>
 const mobileNav = document.getElementById("mobileNav");
 
 // Toggle del menú
