@@ -36,7 +36,7 @@
   background: #fff;
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 20px rgba(255, 0, 242, 0.13);
   text-align: center;
   transition: transform .3s ease, box-shadow .3s ease;
 }
