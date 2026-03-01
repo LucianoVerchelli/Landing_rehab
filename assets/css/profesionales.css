@@ -1,90 +1,127 @@
-/* ------------ SECCIÓN PROFESIONALES ------------ */
+/* ===============================
+    PROFESIONAL SECTION
+================================== */
+
+
 @import "../css/base.css";
 
-
-.prof-container {
-  padding: 150px 20px;
-  background: var(--back-lila_s);
+.profesional-section {
+  width: 100%;
+  padding: 80px 0;
 }
 
-.prof-wrapper {
+.profesional-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
+  padding: 120px 0 25px;
 }
 
-.prof-title {
-  font-size: 44px;
+/* Texto */
+.prof-text {
+  flex: 1;
+}
+
+.prof-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.prof-cargo {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--button-vio); /* azul suave */
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+}
+
+/* ===== LISTAS PRINCIPALES ===== */
+.prof-list {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.prof-list > li {
+  position: relative;
+  padding-left: 18px;
   margin-bottom: 10px;
+  line-height: 1.5;
 }
 
-.prof-sub {
+/* Punto principal */
+.prof-list > li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 4px;
   font-size: 18px;
-  max-width: 700px;
-  margin: 0 auto 50px;
-  line-height: 1.6;
-  color: #555;
+  color: var(--back-lila); 
 }
 
-.prof-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+
+
+/* ===== LISTAS SECUNDARIAS (sub-items) ===== */
+.prof-list ul {
+  list-style: none;
+  padding-left: 20px; /* menos indentación */
+  margin-top: 6px;
 }
 
-.prof-card {
-  background: #fff;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(255, 0, 242, 0.13);
-  text-align: center;
-  transition: transform .3s ease, box-shadow .3s ease;
+.prof-list ul li {
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 6px;
+  font-size: 15px;
 }
 
-.prof-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+/* Punto secundario */
+.prof-list ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  font-size: 14px;
+  color: #A78BD3; /* violeta más suave */
 }
 
-.prof-card img {
+/* Imagen */
+.prof-img-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.prof-img {
   width: 100%;
-  height: 260px;
+  max-width: 480px;
+  border-radius: 18px;
   object-fit: cover;
-  border-radius: 14px;
-  margin-bottom: 20px;
 }
 
-.prof-card h3 {
-  font-size: 24px;
-  margin-bottom: 5px;
-}
-
-.prof-role {
-  font-weight: bold;
-  color: var(--button-vio);
-  margin-bottom: 15px;
-}
-
-.prof-desc {
-  font-size: 16px;
-  color: #444;
-  line-height: 1.6;
-}
-
-/* -------- Responsive -------- */
-
-@media (max-width: 980px) {
-  .prof-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 680px) {
-  .prof-grid {
-    grid-template-columns: 1fr;
+/* ===============================
+    RESPONSIVE MOBILE
+================================== */
+@media (max-width: 900px) {
+  .profesional-container {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .prof-card img {
-    height: 240px;
+  .prof-list li {
+    justify-content: center;
+    font-size: 16px;
+  }
+
+  .prof-text {
+    order: 2;
+  }
+
+  .prof-img-container {
+    order: 1;
   }
 }

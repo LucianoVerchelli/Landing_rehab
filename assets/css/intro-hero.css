@@ -3,7 +3,7 @@
 
 .intro-hero{
   background: var(--back-lila);
-  padding: 90px 0 200px;
+  padding: 250px 0 250px;
 }
 
 .intro-wrap{
@@ -115,6 +115,6 @@
 
 /* RESPONSIVE */
 @media (max-width: 720px){
-  .intro-hero{ padding: 70px 0 45px; }
+  .intro-hero{ padding: 250px 0 250px; }
   .intro-trust{ grid-template-columns: 1fr; }
 }

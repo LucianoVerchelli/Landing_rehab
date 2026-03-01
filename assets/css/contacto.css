@@ -1,93 +1,132 @@
 @import "../css/base.css";
 
-.contact{
-  min-height:50vh;
-  background-color: var(--back-lila);
-  padding: 75px;
-  text-align: center;
-}
-
-.container-contact{
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.container-contact h2{
-  font-size: 2rem;
-  margin-bottom: 40px;
-  color: #333;
-}
-
-.contact-wrapper{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 30px;
-}
-
-.contact-form{
-  text-align: left;
-}
-
-form h3{
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.form-group{
-  margin-bottom: 20px;
-}
-
-input, textarea{
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-  background-color: #f8f9fa;
-  color: #333;
-  font-size: 0.8rem;
-}
-
-.button-contact{
-  background-color: #198754;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  margin-top: 20px;
-}
-
-.contact-info{
-  text-align: center;
-  margin-left: 20px;
-  padding-bottom: 20px;
-  background-color: white;
-  border-radius: 50px;
-}
-
-.container-info{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.contact-info p{
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.contact-info i{
-  font-size: 2rem;
-  padding-right: 10px;
-  color: #157347;
-}
-
-/* RESPONSIVE */
-@media (max-width: 830px){
-  .contact-wrapper{
-    grid-template-columns: 1fr;
+.contacto {
+    padding: 80px 20px;
+    background-color: var(--back-lila); 
     text-align: center;
-  }
+}
+
+.contacto-titulo {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.contacto-card {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--back-lila_s);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.1); /* Sombra pro */
+}
+
+/* --- Formulario (Izquierda) --- */
+.contacto-form-container {
+    flex: 1.2;
+    padding: 50px;
+    text-align: left;
+}
+
+.contacto-form-container h3 {
+    margin-bottom: 25px;
+    color: black;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input, .input-group textarea {
+    width:100%;
+    padding-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background: #f9f9f9;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--back-lila);
+    background: #fff;
+}
+
+.btn-enviar {
+    background-color: var(--button-vio);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 1s ease-in;
+}
+
+.btn-enviar:hover {
+    background: linear-gradient(90deg, #7c84f8, #fd2bfd);
+    transform: translateY(-2px);
+}
+
+/* --- Info (Derecha) --- */
+.contacto-info-container {
+    flex: 0.8;
+    background-color: var(--button-vio); 
+    padding: 50px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.contacto-info-container h3 {
+    margin-bottom: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.info-item i {
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.mapa-wrapper {
+    margin-top: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 150px;
+    border: 2px solid rgba(255,255,255,0.2);
+}
+
+.mapa-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.input-group input:focused:invalid {
+    border-color: #e74c3c; /* Rojo error */
+}
+
+/* Cuando el input es válido */
+.input-group input:valid {
+    border-color: #2ecc71; /* Verde éxito */
+}
+
+/* Responsive para celulares */
+@media (max-width: 768px) {
+    .contacto-card {
+        flex-direction: column;
+    }
+    .contacto-form-container, .contacto-info-container {
+        padding: 30px;
+    }
 }

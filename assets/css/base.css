@@ -12,3 +12,34 @@ body {
   background-color: var(--back-lila_s);
   color: #2e2e2e;
 }
+
+html {
+    scroll-behavior: smooth; /* Para que los links del navbar bajen con animación */
+}
+
+body {
+    line-height: 1.6;
+    overflow-x: hidden; /* Evita el scroll horizontal molesto en móviles */
+    font-family: sans-serif; /* Cambiala por tu Google Font luego */
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
