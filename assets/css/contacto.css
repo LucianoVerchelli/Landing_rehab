@@ -40,7 +40,7 @@
 
 .input-group input, .input-group textarea {
     width:100%;
-    padding-bottom: 20px;
+    padding: 20px;
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     background: #f9f9f9;
@@ -112,7 +112,6 @@
     object-fit: cover;
 }
 
-/* 1. Quitamos el verde automático */
 .input-group input:valid {
     border-color: #e0e0e0; /* Color gris suave original */
 }
@@ -125,7 +124,6 @@
     box-shadow: 0 0 5px rgba(124, 132, 248, 0.2); /* Un brillo sutil */
 }
 
-/* 3. Estilo opcional para cuando el JS detecta un error */
 .input-group input.input-error {
     border-color: #e74c3c !important;
 }
