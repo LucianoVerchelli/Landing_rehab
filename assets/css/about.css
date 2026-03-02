@@ -3,7 +3,7 @@
 /* --- Sección y estructura --- */
 .section {
   min-height: 70vh;
-  padding-top: 70px;
+  padding-top: 100px;
   display: flex;
   align-items: flex-start;
 }
@@ -15,7 +15,7 @@
 
 .grid {
   display: grid;
-   padding-top: 100px; 
+   padding-top: 2gio0px; 
   grid-template-columns: 1.05fr 1fr;
   gap: 54px;
   align-items: center;
