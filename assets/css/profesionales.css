@@ -1,6 +1,6 @@
 /* SECTION */
 .team-section {
-  padding: 4rem 2rem;
+  padding: 170px 2rem;
   max-width: 1300px;
   margin: auto;
 }
@@ -11,7 +11,7 @@
   grid-template-columns: repeat(4, 1fr); /* 4 tarjetas por fila */
   gap: 2rem;
   width: 100%;
-  
+
 }
 
 /* CARD */
@@ -101,7 +101,7 @@
   }
 
   .team-section {
-    padding: 3rem 1.5rem;
+    padding: 150px 1.5rem;
   }
 
   .team-img img {
