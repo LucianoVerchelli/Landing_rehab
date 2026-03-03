@@ -11,6 +11,7 @@
   grid-template-columns: repeat(4, 1fr); /* 4 tarjetas por fila */
   gap: 2rem;
   width: 100%;
+  
 }
 
 /* CARD */
