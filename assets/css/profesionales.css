@@ -1,127 +1,204 @@
-/* ===============================
-    PROFESIONAL SECTION
-================================== */
+/* SECTION */
+.team-section {
+  padding: 4rem 2rem;
+  max-width: 1300px;
+  margin: auto;
+}
 
-
-@import "../css/base.css";
-
-.profesional-section {
+/* GRID RESPONSIVE */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 tarjetas por fila */
+  gap: 2rem;
   width: 100%;
-  padding: 80px 0;
 }
 
-.profesional-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 120px 0 25px;
-}
-
-/* Texto */
-.prof-text {
-  flex: 1;
-}
-
-.prof-name {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #333;
-}
-
-.prof-cargo {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--button-vio); /* azul suave */
-  margin-bottom: 25px;
-  letter-spacing: 0.5px;
-}
-
-/* ===== LISTAS PRINCIPALES ===== */
-.prof-list {
-  list-style: none;
-  padding-left: 0;
-  margin-left: 0;
-}
-
-.prof-list > li {
-  position: relative;
-  padding-left: 18px;
-  margin-bottom: 10px;
-  line-height: 1.5;
-}
-
-/* Punto principal */
-.prof-list > li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  top: 4px;
-  font-size: 18px;
-  color: var(--back-lila); 
-}
-
-
-
-/* ===== LISTAS SECUNDARIAS (sub-items) ===== */
-.prof-list ul {
-  list-style: none;
-  padding-left: 20px; /* menos indentación */
-  margin-top: 6px;
-}
-
-.prof-list ul li {
-  position: relative;
-  padding-left: 14px;
-  margin-bottom: 6px;
-  font-size: 15px;
-}
-
-/* Punto secundario */
-.prof-list ul li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  top: 4px;
-  font-size: 14px;
-  color: #A78BD3; /* violeta más suave */
-}
-
-/* Imagen */
-.prof-img-container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.prof-img {
-  width: 100%;
-  max-width: 480px;
+/* CARD */
+.team-card {
+  background: #fff;
   border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 35px rgba(0,0,0,0.06);
+  transition: transform .35s ease, box-shadow .35s ease;
+  animation: fadeUp .8s ease both;
+}
+
+/* HOVER ELEVATION */
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.09);
+}
+
+/* IMAGE */
+.team-img img {
+  width: 100%;
+  height: 300px;
   object-fit: cover;
 }
 
-/* ===============================
-    RESPONSIVE MOBILE
-================================== */
+/* CONTENT */
+.team-info {
+  padding: 1.8rem;
+}
+
+.team-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: .3rem;
+}
+
+.role {
+  color: #be7dbe;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  font-size: .85rem;
+  margin-bottom: 1.3rem;
+}
+
+.team-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.team-info li {
+  margin-bottom: .6rem;
+  padding-left: 1.2rem;
+  position: relative;
+  font-size: .95rem;
+  color: #444;
+}
+
+/* Bullet moderno */
+.team-info li::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #be7dbe;
+  border-radius: 50%;
+  left: 0;
+  top: 9px;
+}
+
+/* ============ RESPONSIVE ============ */
+
+/* Tablets grandes (≤1200px) → 3 columnas */
+@media (max-width: 1200px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .team-img img {
+    height: 240px;
+  }
+}
+
+/* Tablets (≤900px) → 2 columnas */
 @media (max-width: 900px) {
-  .profesional-container {
-    flex-direction: column;
-    text-align: center;
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .prof-list li {
-    justify-content: center;
-    font-size: 16px;
+  .team-section {
+    padding: 3rem 1.5rem;
   }
 
-  .prof-text {
-    order: 2;
+  .team-img img {
+    height: 220px;
   }
 
-  .prof-img-container {
-    order: 1;
+  .team-info h3 {
+    font-size: 1.3rem;
   }
+}
+
+/* Mobile grande (≤600px) → 1 columna */
+@media (max-width: 600px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card {
+    max-width: 420px;
+    margin: auto;
+  }
+
+  .team-img img {
+    height: 300px;
+  }
+
+  .team-info {
+    padding: 1.4rem;
+  }
+
+  .team-info h3 {
+    font-size: 1.25rem;
+  }
+
+  .role {
+    font-size: 0.8rem;
+  }
+
+  .team-info li {
+    font-size: 0.9rem;
+  }
+
+  .ver-mas {
+    width: 100%;
+    padding: 10px;
+    font-size: .95rem;
+  }
+}
+
+/* Mobile chico (≤400px) → Ajustes finos */
+@media (max-width: 400px) {
+  .team-img img {
+    height: 300px;
+    border-radius: 30px;
+  }
+
+  .team-info h3 {
+    font-size: 1.15rem;
+  }
+
+  .team-info {
+    padding: 1.2rem;
+  }
+
+  .team-info li {
+    font-size: 0.88rem;
+  }
+}
+
+
+.oculto {
+  display: none;
+}
+
+/* Botón */
+.ver-mas {
+  margin-top: 10px;
+  background: #be7dbe;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: .9rem;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.ver-mas:hover {
+  opacity: .8;
+}
+
+/* Ocultar botón */
+.hidden {
+  display: none;
+}
+
+/* Transición acordeón */
+.team-info ul {
+  overflow: hidden;
+  transition: max-height .35s ease;
 }

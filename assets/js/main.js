@@ -149,3 +149,63 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+
+const cards = document.querySelectorAll(".team-card");
+
+cards.forEach(card => {
+  const list = card.querySelector(".titulos");
+  if (!list) return;
+
+  const items = list.querySelectorAll("li");
+  const btn = card.querySelector(".ver-mas");
+
+  if (!btn) return;
+
+  // Solo mostrar botón si hay más de 4 ítems
+  if (items.length > 4) {
+    btn.classList.remove("hidden");
+
+    // Ocultar desde el 5to
+    items.forEach((li, index) => {
+      if (index >= 3) li.classList.add("oculto");
+    });
+
+    // Evento del botón
+    btn.addEventListener("click", () => {
+      
+      // ❗ CERRAR TODAS LAS OTRAS CARDS
+      cards.forEach(other => {
+        if (other !== card) {
+          const otherList = other.querySelector(".titulos");
+          const otherItems = otherList?.querySelectorAll("li");
+          const otherBtn = other.querySelector(".ver-mas");
+
+          if (otherItems && otherItems.length > 4) {
+            otherItems.forEach((li, i) => {
+              if (i >= 4) li.classList.add("oculto");
+            });
+
+            otherBtn.textContent = "Ver más";
+          }
+        }
+      });
+
+      // ❗ ABRIR O CERRAR SOLO ESTA CARD
+      const ocultos = list.querySelectorAll("li.oculto");
+
+      if (ocultos.length > 0) {
+        // Abrir
+        ocultos.forEach(li => li.classList.remove("oculto"));
+        btn.textContent = "Ver menos";
+      } else {
+        // Cerrar
+        items.forEach((li, index) => {
+          if (index >= 4) li.classList.add("oculto");
+        });
+        btn.textContent = "Ver más";
+      }
+    });
+  }
+});

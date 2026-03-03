@@ -39,12 +39,9 @@
     text-align: left;
 }
 
-.item img {
-    width: 55px;
-    height: 55px;
-    object-fit: contain;
-    filter: brightness(0) saturate(100%) invert(29%) sepia(97%) 
-            saturate(1711%) hue-rotate(191deg) brightness(95%) contrast(93%);
+i {
+  font-size: 64px;
+  color: #be7dbe;
 }
 
 .item h3 {
@@ -92,3 +89,5 @@
         /* antes tenías 250px abajo, eso exageraba el espacio */
     }
 }
+
+
