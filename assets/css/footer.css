@@ -16,10 +16,10 @@
   justify-content: center;
 }
 
-.social-links li a {
+.social-links li a i{
   text-decoration: none;
   color: var(--button-vio);
-  font-size: 1.5rem;
+  font-size: 30px;
   transition: color 0.1s ease-in-out;
 }
 
