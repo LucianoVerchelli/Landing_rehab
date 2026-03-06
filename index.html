@@ -13,6 +13,16 @@
 <meta property="og:description" content="Tratamiento profesional y acompañamiento humano para superar adicciones.">
 <meta property="og:type" content="website">
 
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+(function(){
+emailjs.init({
+  publicKey: "H1t7vs4eH_-ucUahX",
+});
+})();
+</script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
    <link rel="stylesheet" href="assets/css/base.css">
@@ -398,20 +408,20 @@ Al finalizar, se realiza una evaluación interdisciplinaria para definir si corr
     <div class="contacto-card">
         <div class="contacto-form-container">
             <h3>Envianos un mensaje</h3>
-            <form id="contactoForm" novalidate> <div class="input-group">
-        <input type="text" id="nombre" data-name="Nombre y Apellido" placeholder="Nombre y Apellido">
+            <form id="contactoForm"> <div class="input-group">
+        <input type="text" id="nombre" name="nombre" data-name="Nombre y Apellido" placeholder="Nombre y Apellido">
     </div>
     
     <div class="input-group">
-        <input type="email" id="email" data-name="Email" placeholder="Email de Contacto">
+        <input type="email" id="email" name="email" data-name="Email" placeholder="Email de Contacto">
     </div>
     
     <div class="input-group">
-        <input type="tel" id="telefono" data-name="Teléfono" placeholder="Teléfono (ej: 11 1234 5678)">
+        <input type="tel" id="telefono" name="telefono" data-name="Teléfono" placeholder="Teléfono (ej: 11 1234 5678)">
     </div>
     
     <div class="input-group">
-        <textarea id="mensaje" data-name="Mensaje" placeholder="Cuéntanos cómo podríamos ayudarte"></textarea>
+        <textarea id="mensaje" data-name="Mensaje" name="mensaje" placeholder="Cuéntanos cómo podríamos ayudarte"></textarea>
     </div>
     
     <button type="submit" class="btn-enviar" id="btnEnviar">Enviar Mensaje</button>

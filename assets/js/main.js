@@ -252,3 +252,46 @@ button.classList.remove("pulse")
 },600)
 
 },10000)
+
+
+
+// formulario
+
+// formulario
+const btn = document.getElementById('btnEnviar');
+
+document.getElementById("contactoForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+btn.innerText = 'Enviando...';
+
+const serviceID = "service_yztvo5z";
+const templateID = "template_lo996mz";
+
+emailjs.sendForm(serviceID, templateID, this)
+.then(function(){
+
+Swal.fire({
+icon: 'success',
+title: 'Mensaje enviado',
+text: 'Nos pondremos en contacto contigo pronto'
+});
+
+document.getElementById("contactoForm").reset();
+btn.innerText = 'Enviar Mensaje';
+
+}, function(error){
+
+Swal.fire({
+icon: 'error',
+title: 'Error',
+text: 'No se pudo enviar el mensaje'
+});
+
+console.log(error);
+btn.innerText = 'Enviar Mensaje';
+
+});
+
+});
