@@ -209,3 +209,46 @@ cards.forEach(card => {
     });
   }
 });
+
+
+// BOTON FLOTANTE DE SOPORTE WP 
+
+document.addEventListener("DOMContentLoaded", () => {
+
+const chat = document.getElementById("whatsappChat")
+const message = document.getElementById("whatsappMessage")
+
+let visible = false
+
+window.addEventListener("scroll", () => {
+
+if(window.scrollY > 2000 && !visible){
+
+chat.classList.add("show")
+visible = true
+
+setTimeout(()=>{
+
+message.style.display="none"
+
+},5000)
+
+}
+
+})
+
+})
+
+const button = document.querySelector(".whatsapp-button")
+
+setInterval(()=>{
+
+button.classList.add("pulse")
+
+setTimeout(()=>{
+
+button.classList.remove("pulse")
+
+},600)
+
+},10000)
