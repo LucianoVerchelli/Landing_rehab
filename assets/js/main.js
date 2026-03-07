@@ -266,8 +266,8 @@ e.preventDefault();
 
 btn.innerText = 'Enviando...';
 
-const serviceID = "service_yztvo5z";
-const templateID = "template_lo996mz";
+const serviceID = "service_csuclqj";
+const templateID = "template_tbeavw8";
 
 emailjs.sendForm(serviceID, templateID, this)
 .then(function(){
