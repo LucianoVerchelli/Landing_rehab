@@ -5,7 +5,6 @@
 /* ============================= */
 
 .divider-section {
-    background: url('../assets/img/bg-trees.jpg') center/cover no-repeat;
     padding: 100px 20px;   /* espacio vertical + laterales */
     margin-top: 100px;
     position: relative;
